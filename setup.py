@@ -54,7 +54,14 @@ setup(
     include_package_data=True,
     install_requires=[
         "importlib-metadata ; python_version<'3.8'",
+        "cookiecutter>=1.7.3,<2.0.0",
+        "eth-ape>=0.2.2,<0.3.0",
     ],  # NOTE: Add 3rd party libraries here
+    entry_points={
+        "ape_cli_subcommands": [
+            "ape_template=ape_template._cli:cli",
+        ],
+    },
     python_requires=">=3.7,<4",
     extras_require=extras_require,
     py_modules=["ape_template"],
@@ -64,7 +71,7 @@ setup(
     packages=find_packages(exclude=["tests", "tests.*"]),
     package_data={"ape_template": ["py.typed"]},
     classifiers=[
-        "Development Status :: 4 - Beta",
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: Apache Software License",
         "Natural Language :: English",
