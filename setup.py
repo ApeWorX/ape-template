@@ -10,10 +10,10 @@ extras_require = {
         "hypothesis>=6.2.0,<7.0",  # Strategy-based fuzzer
     ],
     "lint": [
-        "black>=21.10b0,<22.0",  # auto-formatter and linter
-        "mypy>=0.910,<1.0",  # Static type analyzer
-        "flake8>=3.8.3,<4.0",  # Style linter
-        "isort>=5.9.3,<6.0",  # Import sorting linter
+        "black>=22.3.0,<23.0",  # auto-formatter and linter
+        "mypy>=0.961,<1.0",  # Static type analyzer
+        "flake8>=4.0.1,<5.0",  # Style linter
+        "isort>=5.10.1,<6.0",  # Import sorting linter
     ],
     "release": [  # `release` GitHub Action job uses this
         "setuptools",  # Installation tool
@@ -21,7 +21,7 @@ extras_require = {
         "twine",  # Package upload tool
     ],
     "dev": [
-        "commitizen",  # Manage commits and publishing releases
+        "commitizen>=2.19,<2.20",  # Manage commits and publishing releases
         "pre-commit",  # Ensure that linters are run prior to commiting
         "pytest-watch",  # `ptw` test watcher/runner
         "IPython",  # Console for interacting
@@ -54,15 +54,15 @@ setup(
     include_package_data=True,
     install_requires=[
         "importlib-metadata ; python_version<'3.8'",
-        "cookiecutter>=1.7.3,<2.0.0",
-        "eth-ape>=0.2.2,<0.3.0",
+        "cookiecutter>=2.1.1,<2.2.0",
+        "eth-ape>=0.3.0,<0.4.0",
     ],  # NOTE: Add 3rd party libraries here
     entry_points={
         "ape_cli_subcommands": [
             "ape_template=ape_template._cli:cli",
         ],
     },
-    python_requires=">=3.7,<4",
+    python_requires=">=3.7.2,<4",
     extras_require=extras_require,
     py_modules=["ape_template"],
     license="Apache-2.0",

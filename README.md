@@ -1,12 +1,10 @@
 # ape-template
 
-TODO: Description
+The ape-template plugin allows you to use cookiecutter to template an ape project.
 
 ## Dependencies
 
 * [python3](https://www.python.org/downloads) version 3.7 or greater, python3-dev
-* [cookiecutter](https://cookiecutter.readthedocs.io/en/2.0.2/) version 1.7.3
-* [eth-ape](https://docs.apeworx.io/ape/stable/) 0.2.2 or greater, 
 
 ## Installation
 
@@ -30,12 +28,25 @@ python3 setup.py install
 
 ## Quick Usage
 
-TODO: Describe library overview in code
+Use `-h` to list all the commands.
+
+```bash
+ape template -h
+```
+
+To use the `template` command, provide either a GitHub repository ID or a raw URI:
+
+```bash
+ape template gh:<github org>/<project>
+
+ape template <URI>
+```
+
+For more information on Cookiecutter, see their [documentation](https://cookiecutter.readthedocs.io/en/stable/).
 
 ## Development
 
-This project is in development and should be considered a beta.
-Things might not be in their final state and breaking changes may occur.
+Please see the [contributing guide](CONTRIBUTING.md) to learn more how to contribute to this project.
 Comments, questions, criticisms and pull requests are welcomed.
 
 ## License

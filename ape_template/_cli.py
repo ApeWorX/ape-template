@@ -1,2 +1,2 @@
 # flake8: noqa
-from cookiecutter.cli import main as cli
+from cookiecutter.cli import main as cli  # type: ignore
