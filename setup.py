@@ -55,7 +55,7 @@ setup(
     install_requires=[
         "importlib-metadata ; python_version<'3.8'",
         "cookiecutter>=2.1.1,<2.2.0",
-        "eth-ape>=0.3.0,<0.4.0",
+        "eth-ape>=0.4.0,<0.5.0",
     ],  # NOTE: Add 3rd party libraries here
     entry_points={
         "ape_cli_subcommands": [
