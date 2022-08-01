@@ -1,6 +1,6 @@
+import os
 import shutil
 from pathlib import Path
-import os
 
 import pytest
 from click.testing import CliRunner
