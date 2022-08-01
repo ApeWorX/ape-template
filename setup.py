@@ -4,14 +4,14 @@ from setuptools import find_packages, setup  # type: ignore
 
 extras_require = {
     "test": [  # `test` GitHub Action jobs uses this
-        "pytest>=6.0,<7.0",  # Core testing package
+        "pytest>=6.0",  # Core testing package
         "pytest-xdist",  # multi-process runner
         "pytest-cov",  # Coverage analyzer plugin
         "hypothesis>=6.2.0,<7.0",  # Strategy-based fuzzer
     ],
     "lint": [
-        "black>=22.3.0,<23.0",  # auto-formatter and linter
-        "mypy>=0.961,<1.0",  # Static type analyzer
+        "black>=22.6.0,<23.0",  # auto-formatter and linter
+        "mypy>=0.971,<1.0",  # Static type analyzer
         "flake8>=4.0.1,<5.0",  # Style linter
         "isort>=5.10.1,<6.0",  # Import sorting linter
     ],
@@ -22,7 +22,7 @@ extras_require = {
     ],
     "dev": [
         "commitizen>=2.19,<2.20",  # Manage commits and publishing releases
-        "pre-commit",  # Ensure that linters are run prior to commiting
+        "pre-commit",  # Ensure that linters are run prior to committing
         "pytest-watch",  # `ptw` test watcher/runner
         "IPython",  # Console for interacting
         "ipdb",  # Debugger (Must use `export PYTHONBREAKPOINT=ipdb.set_trace`)
@@ -53,10 +53,11 @@ setup(
     url="https://github.com/ApeWorX/<REPO_NAME>",
     include_package_data=True,
     install_requires=[
+        "click",  # Use same version as eth-ape
         "importlib-metadata ; python_version<'3.8'",
         "cookiecutter>=2.1.1,<2.2.0",
         "eth-ape>=0.4.0,<0.5.0",
-    ],  # NOTE: Add 3rd party libraries here
+    ],
     entry_points={
         "ape_cli_subcommands": [
             "ape_template=ape_template._cli:cli",
@@ -81,5 +82,6 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
     ],
 )
