@@ -1,5 +1,6 @@
 import shutil
 from pathlib import Path
+import os
 
 import pytest
 from click.testing import CliRunner
@@ -15,6 +16,15 @@ def cli():
 @pytest.fixture(scope="session")
 def runner():
     yield CliRunner()
+
+
+@pytest.fixture(scope="session", autouse=True)
+def from_tests_dir():
+    tests_dir = Path(__file__).parent
+    curr_dir = os.curdir
+    os.chdir(str(tests_dir))
+    yield tests_dir
+    os.chdir(curr_dir)
 
 
 @pytest.fixture
