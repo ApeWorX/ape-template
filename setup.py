@@ -21,7 +21,7 @@ extras_require = {
         "twine",  # Package upload tool
     ],
     "dev": [
-        "commitizen>=2.19,<2.20",  # Manage commits and publishing releases
+        "commitizen",  # Manage commits and publishing releases
         "pre-commit",  # Ensure that linters are run prior to committing
         "pytest-watch",  # `ptw` test watcher/runner
         "IPython",  # Console for interacting
@@ -50,20 +50,19 @@ setup(
     long_description_content_type="text/markdown",
     author="ApeWorX Ltd.",
     author_email="admin@apeworx.io",
-    url="https://github.com/ApeWorX/<REPO_NAME>",
+    url="https://github.com/ApeWorX/ape-template",
     include_package_data=True,
     install_requires=[
         "click",  # Use same version as eth-ape
-        "importlib-metadata ; python_version<'3.8'",
         "cookiecutter>=2.1.1,<2.2.0",
-        "eth-ape>=0.4.0,<0.5.0",
+        "eth-ape>=0.5.0,<0.6",
     ],
     entry_points={
         "ape_cli_subcommands": [
             "ape_template=ape_template._cli:cli",
         ],
     },
-    python_requires=">=3.7.2,<4",
+    python_requires=">=3.8,<4",
     extras_require=extras_require,
     py_modules=["ape_template"],
     license="Apache-2.0",
@@ -79,7 +78,6 @@ setup(
         "Operating System :: MacOS",
         "Operating System :: POSIX",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
