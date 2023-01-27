@@ -59,7 +59,7 @@ setup(
     install_requires=[
         "click",  # Use same version as eth-ape
         "cookiecutter>=2.1.1,<2.2.0",
-        "eth-ape>=0.5.0,<0.6",
+        "eth-ape>=0.6.0,<0.7",
     ],
     entry_points={
         "ape_cli_subcommands": [
